@@ -11,6 +11,9 @@
 		DAE66CF92AF5718C00B2691A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE66CF82AF5718C00B2691A /* ContentView.swift */; };
 		DAE66CFB2AF5718D00B2691A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE66CFA2AF5718D00B2691A /* Assets.xcassets */; };
 		DAE66CFE2AF5718D00B2691A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE66CFD2AF5718D00B2691A /* Preview Assets.xcassets */; };
+		DAE66D062AF578C500B2691A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE66D052AF578C500B2691A /* LaunchScreen.storyboard */; };
+		DAE66D092AF580BD00B2691A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE66D082AF580BD00B2691A /* Category.swift */; };
+		DAE66D0B2AF58E0A00B2691A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE66D0A2AF58E0A00B2691A /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		DAE66CF82AF5718C00B2691A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DAE66CFA2AF5718D00B2691A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE66CFD2AF5718D00B2691A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DAE66D052AF578C500B2691A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAE66D082AF580BD00B2691A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		DAE66D0A2AF58E0A00B2691A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		DAE66CF52AF5718C00B2691A /* Airbnb-Clone-A */ = {
 			isa = PBXGroup;
 			children = (
+				DAE66D072AF5801100B2691A /* components */,
+				DAE66D042AF5784900B2691A /* onboarding */,
 				DAE66CF62AF5718C00B2691A /* Airbnb_Clone_AApp.swift */,
 				DAE66CF82AF5718C00B2691A /* ContentView.swift */,
 				DAE66CFA2AF5718D00B2691A /* Assets.xcassets */,
@@ -65,6 +73,23 @@
 				DAE66CFD2AF5718D00B2691A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DAE66D042AF5784900B2691A /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DAE66D052AF578C500B2691A /* LaunchScreen.storyboard */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		DAE66D072AF5801100B2691A /* components */ = {
+			isa = PBXGroup;
+			children = (
+				DAE66D082AF580BD00B2691A /* Category.swift */,
+				DAE66D0A2AF58E0A00B2691A /* Card.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE66D062AF578C500B2691A /* LaunchScreen.storyboard in Resources */,
 				DAE66CFE2AF5718D00B2691A /* Preview Assets.xcassets in Resources */,
 				DAE66CFB2AF5718D00B2691A /* Assets.xcassets in Resources */,
 			);
@@ -139,6 +165,8 @@
 			files = (
 				DAE66CF92AF5718C00B2691A /* ContentView.swift in Sources */,
 				DAE66CF72AF5718C00B2691A /* Airbnb_Clone_AApp.swift in Sources */,
+				DAE66D092AF580BD00B2691A /* Category.swift in Sources */,
+				DAE66D0B2AF58E0A00B2691A /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +297,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Airbnb-Clone-A/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Airbnb;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -297,9 +327,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Airbnb-Clone-A/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Airbnb;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
