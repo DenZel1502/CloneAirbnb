@@ -8,29 +8,37 @@
 import SwiftUI
 
 struct Card: View {
+    let place : Place
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Image("item1")
+            
+            
+            AsyncImage(url: URL(string: place.image_url)){ image in image.resizable()
                 .frame(width: 342, height: 323)
                 .cornerRadius(16)
+            } placeholder: {
+                ProgressView()
+            }
+            
             HStack {
-                Text("Harlingen, Netherlands")
+                Text("\(place.name), \(place.location.city)")
                     .fontWeight(.bold)
                 Spacer()
                 HStack {
                     Image(systemName: "star.fill")
                         .font(.system(size: 11))
-                    Text("4.8")
+                    Text("\(place.rating)")
                 }
             }
 
-            Text("Professional Host")
+            Text("\(place.location.country)")
                 .fontWeight(.light)
                 .foregroundStyle(.gray)
-            Text("18-23 Dec")
+            Text("\(place.date)")
                 .fontWeight(.light)
                 .foregroundStyle(.gray)
-            Text("$1,065 total")
+            Text("$\(place.price)")
                 .fontWeight(.semibold)
         }.padding()
     }
@@ -39,6 +47,13 @@ struct Card: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        Card()
+        Card(place: Place(
+            name: "Nombre de hotel",
+            rating: 4.5,
+            location: Location(country: "Pais", city: "Ciudad"),
+            image_url: "https://img.freepik.com/vector-gratis/fondo-fachada-hotel-plana_23-2148157379.jpg",
+            date: "10-12-25",
+            price: 44
+        ))
     }
 }

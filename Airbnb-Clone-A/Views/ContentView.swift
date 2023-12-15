@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var contentViewModel = ContentViewModel()
+    
+    
+    
     var body: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false){
@@ -22,14 +26,14 @@ struct ContentView: View {
             
             Divider()
             
-            List {
-                Card()
-                Card()
-                Card()
-            }
-            .listStyle(.inset)
-            .scrollIndicators(.hidden)
-            .padding([.trailing, .leading])
+            List(contentViewModel.airbnb.places, id: \.name) { place in
+                            Card(place: place)
+                        }
+                        .listStyle(.inset)
+                        .scrollIndicators(.hidden)
+                        .task {
+                            await contentViewModel.loadData()
+                        }
             
             Spacer()
         }

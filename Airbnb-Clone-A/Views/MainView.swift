@@ -31,7 +31,7 @@ struct MainView: View {
                     VStack{
                         Image("logo-icon")
                             .renderingMode(.template)
-                        Text("Wishlist")
+                        Text("Map")
                     }
                 }
             InboxView()
@@ -39,7 +39,7 @@ struct MainView: View {
                     VStack{
                         Image("inbox")
                             .renderingMode(.template)
-                        Text("Wishlist")
+                        Text("Inbox")
                     }
                 }
             ProfileView()

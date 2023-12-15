@@ -19,7 +19,7 @@ struct TripsView: View {
             VStack {
                 Spacer()
                 HStack {
-                    Image("image")
+                    Image("item1")
                         .resizable()
                         .frame(width: 90)
                         .cornerRadius(10)
